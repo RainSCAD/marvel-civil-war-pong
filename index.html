@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>Marvel Civil War Pong</title>
+
+    <!-- ✅ Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <!-- ✅ P5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+<!-- Load Dependencies Clearly First -->
+<script src="./js/startScreen.js"></script>
+<script src="./js/heroIcons.js"></script>
+<script src="./js/countdown.js"></script>
+<script src="./js/heroList.js"></script>
+<script src="./js/characterSelection.js"></script>
+<script src="./js/abilityInstructions.js"></script>
+
+<!-- ✅ Game Mechanics and Logic -->
+<script src="./js/pongBasics.js"></script>
+<script src="./js/abilities.js"></script>
+<script src="./js/obstacles.js"></script>
+<script src="./js/playScreen.js"></script>
+
+<!-- ✅ Load Main Game Script Last -->
+<script src="./js/sketch.js"></script>
+
+
+</head>
+<body>
+
+    <!-- 🎮 Start Screen -->
+    <div id="start-screen">
+        <div id="gameTitle" class="glow-text">MARVEL CIVIL WAR PONG</div>
+
+        <!-- Menu Options -->
+        <div id="start-button" class="menu-option">▶ Start Game</div>
+        <div id="hero-list-button" class="menu-option">🦸‍♂️ Hero List</div>
+        <div id="settings-button" class="menu-option">⚙️ Settings</div>
+
+        <!-- Credits -->
+        <div id="codedBy" class="coded-glow">Coded by Rain Agbabiaka</div>
+    </div>
+
+    <div id="scoreboard" style="display: none;">
+        <span id="player1-score">0</span> - <span id="player2-score">0</span>
+    </div>
+    
+    
+
+    <!-- ✅ Handle Menu Clicks in JavaScript -->
+    <script>
+        document.getElementById("start-button").addEventListener("click", startGame);
+        document.getElementById("hero-list-button").addEventListener("click", openHeroList);
+        document.getElementById("settings-button").addEventListener("click", openSettings);
+    </script>
+
+</body>
+</html>
