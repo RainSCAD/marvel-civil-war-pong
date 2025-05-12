@@ -1,0 +1,392 @@
+/* 🌍 Global Styles */
+body {
+    margin: 0;
+    font-family: 'Bangers', cursive;
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* 🔥 Title Glow Effect */
+#gameTitle {
+    font-size: 50px;
+    font-family: "Bangers", sans-serif;
+    color: white;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px darkred;
+    position: absolute;
+    top: 10%; /* ✅ Positions title properly */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 🎮 Start Screen Styling */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ✅ Centers vertically */
+    align-items: center; /* ✅ Centers horizontally */
+    text-align: center;
+    position: fixed; /* ✅ Ensures proper screen alignment */
+    width: 100%;
+    height: 100%;
+}
+
+/* 🎮 Menu Options */
+.menu-option {
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 5px white;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block; /* ✅ Ensures visibility */
+    background: rgba(0, 0, 0, 0.4); /* ✅ Adds subtle visibility boost */
+    border-radius: 8px;
+}
+
+/* ✨ Highlight Effect */
+.menu-option:hover,
+.menu-option.highlight {
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px orange;
+}
+
+/* 📍 Position Each Menu Option */
+#menuOption0 { top: 50%; }
+#menuOption1 { top: 58%; }
+#menuOption2 { top: 66%; }
+
+/* 🖋️ "Coded by" Glow */
+#credit {
+    font-size: 14px;
+    color: lightgray;
+    text-shadow: 0 0 5px white, 0 0 10px gray;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🔳 Instruction Styling */
+#instructions {
+    font-size: 16px;
+    color: yellow;
+    margin-top: 20px;
+}
+
+
+/* 🦸 Character Selection Title */
+#character-selection-title {
+    font-family: "Bangers", sans-serif;
+    font-size: 60px;
+    color: white;
+    text-shadow: 0 0 10px red, 0 0 20px yellow, 0 0 40px darkred;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 🎮 Character Selection Instructions */
+#character-selection-instructions {
+    font-family: "Bangers", sans-serif;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 5px yellow, 0 0 10px orange;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 🦸 Team Container */
+.character-selection-container {
+    display: flex;
+    justify-content: space-between; /* ✅ Ensures left/right alignment */
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🔴 Team Iron Man */
+#team-ironman {
+    text-align: center;
+    width: 45%;
+    color: white;
+    text-shadow: 0 0 10px red, 0 0 20px darkred;
+    font-family: "Bangers", sans-serif;
+}
+
+/* 🔵 Team Captain America */
+#team-cap {
+    text-align: center;
+    width: 45%;
+    color: white;
+    text-shadow: 0 0 10px blue, 0 0 20px darkblue;
+    font-family: "Bangers", sans-serif;
+}
+
+/* 🦸 Hero List */
+.hero-list {
+    list-style: none;
+    padding: 0;
+    font-size: 24px;
+}
+
+/* 🚀 Highlight Effect for Selection */
+.hero-list li {
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.hero-list li.highlight {
+    background-color: yellow;
+    color: black;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+/* 🕶️ Greyed Out Team (For inactive player) */
+.greyed-out {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+/* 🔲 Default Hero List Item */
+.hero-list li {
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ✨ Highlighted Hero (Current Selection) */
+.hero-list li.highlight {
+    background-color: yellow;
+    color: black;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+/* ✅ Confirmed Hero Selection (Green Outline) */
+.hero-list li.selected {
+    outline: 4px solid limegreen;
+    background-color: rgba(0, 255, 0, 0.2); /* Faint green overlay */
+    font-weight: bold;
+}
+
+/* 🕒 Countdown Overlay */
+#countdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* ✅ Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Bangers", sans-serif;
+    font-size: 100px;
+    text-shadow: 0 0 10px red, 0 0 20px yellow;
+}
+
+/* 🏆 Scoreboard */
+#scoreboard {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-family: "Bangers", sans-serif;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 20px darkgray;
+    background: rgba(0, 0, 0, 0.5); /* ✅ Transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* 🎖️ Player Scores */
+#player1-score, #player2-score {
+    font-weight: bold;
+    color: yellow;
+}
+
+/* 🏆 Winning Screen */
+#win-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 🔴🔵 Overlay Effect for Team Colors */
+.win-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ✅ Default black overlay */
+}
+.team-ironman-overlay {
+    background-color: rgba(255, 0, 0, 0.5); /* 🔴 Red for Team Iron Man */
+}
+.team-captain-overlay {
+    background-color: rgba(0, 0, 255, 0.5); /* 🔵 Blue for Team Captain America */
+}
+
+/* 🏆 Winner Message Styling */
+#winner-message {
+    position: absolute;
+    top: 40%; /* Move text lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white !important;  /* Force color */
+    text-shadow: 0 0 10px yellow, 0 0 20px red, 0 0 40px darkred;
+    font-family: "Bangers", sans-serif;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Adds slight contrast */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999 !important; /* Ensure it's above everything */
+    
+    /* 🔥 FIXING VISIBILITY */
+    display: block !important; /* Force it to show */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+
+
+/* 🏆 Winning Screen Buttons */
+#win-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#rematch-button, #menu-button {
+    font-family: "Bangers", sans-serif;
+    font-size: 26px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 🔄 Rematch Button */
+#rematch-button {
+    background: red;
+    color: white;
+    text-shadow: 0 0 5px yellow, 0 0 10px orange;
+}
+
+#rematch-button:hover {
+    background: darkred;
+    text-shadow: 0 0 10px yellow, 0 0 20px orange;
+}
+
+/* 🏙️ Back to Avengers Town Button */
+#menu-button {
+    background: navy;
+    color: white;
+    text-shadow: 0 0 5px cyan, 0 0 10px blue;
+}
+
+#menu-button:hover {
+    background: darkblue;
+    text-shadow: 0 0 10px cyan, 0 0 20px lightblue;
+}
+
+/* 🎮 Ability Instructions Overlay */
+#ability-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    text-align: center;
+    flex-direction: column;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+}
+
+/* 🔴🔵 Split Background */
+.ability-left {
+    background-color: rgba(255, 0, 0, 0.8); /* Red for Player 1 */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px yellow;
+}
+
+.ability-right {
+    background-color: rgba(0, 0, 255, 0.8); /* Blue for Player 2 */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px yellow;
+}
+
+/* 🎯 Ability Instruction Text */
+.ability-text {
+    font-size: 24px;
+    font-family: "Bangers", sans-serif;
+    margin-bottom: 15px;
+}
+
+/* 🕒 Cooldown Message */
+.cooldown-text {
+    font-size: 18px;
+    color: yellow;
+}
+
+/* ✅ "Ready" Buttons */
+.ready-button {
+    font-size: 24px;
+    font-family: "Bangers", sans-serif;
+    background: green;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.ready-button:hover {
+    background: limegreen;
+    text-shadow: 0 0 10px yellow;
+}
